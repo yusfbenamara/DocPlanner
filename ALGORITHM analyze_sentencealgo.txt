@@ -1,0 +1,29 @@
+ALGORITHM analyze_sentence
+ VAR  
+    Sentence:STRING
+	length_sentence :INTEGER:=0;
+    word_number:INTEGER := 0
+    vowel_number:INTEGER := 0
+
+ BEGIN
+	REPEAT
+        write("Enter Sentence that ends with .");
+        read (Sentence);
+    UNTIL (Sentence[Sentence.length -1] == '.')
+WHILE (i:INTEGER:=0 <Sentence.length) DO
+    
+     IF(Sentence[i]== ' ') THEN
+        word_number=word_number+1;
+    END_IF
+    IF(Sentence[i]== "a" or "i" or "u" or "o" or "y")  THEN
+        vowel_number=vowel_number+1;
+    END_IF
+    i++;
+END_WHILE
+
+
+write(length_sentence);
+write(word_number);
+write(vowel_number);
+    
+    
